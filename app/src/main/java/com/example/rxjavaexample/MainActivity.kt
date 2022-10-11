@@ -1,16 +1,13 @@
 package com.example.rxjavaexample
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.example.rxjavaexample.examples.example1
-import com.example.rxjavaexample.examples.example2
-import io.reactivex.rxjava3.core.Observable
+import com.example.rxjavaexample.examples.*
 
 
 class MainActivity : AppCompatActivity() {
     companion object {
-        const val NUM_LAUNCH = 2
+        const val NUM_LAUNCH = 7
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,9 +17,18 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+
         when (NUM_LAUNCH) {
             1 -> example1()
             2 -> example2()
+            3 -> example3PersonMerge()
+            4 -> example4PersonConcat()
+            5 -> example5PersonZip()
+            6 -> example6CoordXY()
+            7 -> example7FlatMap()
+            else ->{
+                // TODO("Test code quickly")
+            }
         }
 
 
